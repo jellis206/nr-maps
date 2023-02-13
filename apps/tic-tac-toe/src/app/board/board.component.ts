@@ -17,6 +17,7 @@ export class BoardComponent implements OnInit {
   newGame(): void {
     this.squares = Array(9).fill('');
     this.xIsNext = true;
+    this.winner = ''
   }
 
   get player() {
@@ -41,7 +42,7 @@ export class BoardComponent implements OnInit {
       [1, 4, 7],
       [2, 5, 8],
       [0, 4, 8],
-      [2, 4, 8]
+      [2, 4, 6]
     ];
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];

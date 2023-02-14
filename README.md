@@ -1,7 +1,7 @@
 # NrMaps
 
 Todo, add a gh action that does the following (uses https://github.com/easyPEP/github-action-new-relic-upload-sourcemap)
-`
+```
 on:
   push:
     branches:
@@ -26,4 +26,4 @@ jobs:
         release_id: ${{ env.GIT_SLUG }}
         release_name: prod-${{ env.GIT_SLUG }}
         github_repository_url: ${{ env.REMOTE_URL }}
-`
+```

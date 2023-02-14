@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare let newrelic: any;
+
 @Component({
   selector: 'nr-maps-board',
   templateUrl: './board.component.html',
@@ -31,6 +33,8 @@ export class BoardComponent implements OnInit {
     }
 
     this.winner = this.calculateWinner();
+    const err = new Error("Testing error, square index: " + idx);
+    newrelic?.noticeError(err);
   }
 
   calculateWinner(): string {
